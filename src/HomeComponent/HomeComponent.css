@@ -1,0 +1,195 @@
+.navbar{
+    background-color: white;
+    height: 8vh;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+.navbar-nav{
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 230;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+.navbar-brand{
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 320;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+.nav-item-center .nav-link {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 8px 15px;
+}
+
+.nav-item-center .nav-link:hover {
+  color: #2f4858; 
+  font-weight: 500;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nav-item-center .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #003049;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-item-center .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Full-screen transparent dropdown for mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item-center {
+    padding: 20px;
+  }
+
+  .nav-item-center .nav-link {
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-item-center .nav-link:hover {
+    color: #2f4858; 
+    font-weight: 500;
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1050;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+  }
+
+  /* Smooth animation on show */
+  .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Smooth animation on collapse */
+  .navbar-collapse.collapsing {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.container {
+  display: flex;
+  /* background-color: #000000; */
+  margin-top: 4%;
+  width: 100%;
+  height: calc(100vh - 30vh);
+}
+.image-container{
+  /* background-color: green; */
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-container img{
+  /* background-color: orange; */
+  height: 60%;
+  border-radius: 10px;
+}
+
+.text-container {
+  /* background-color: #c7c7c7; */
+  text-align: center;
+  max-width: 100%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+/* Heading */
+.text-container h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subheading */
+.text-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+.text-container p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Circular Buttons */
+.buttons button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Individual Button Colors */
+.resume { background-color: #f4a100; }  /* Orange */
+.projects { background-color: #ff3b30; } /* Red */
+.contact { background-color: #5ac8fa; }  /* Blue */
+
+/* Hover Effect */
+.buttons button:hover {
+  transform: scale(1.1);
+}
